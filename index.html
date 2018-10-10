@@ -930,10 +930,13 @@
 <script type="text/javascript">
 
         $(function () {
-            $("[lazy-src]").each(function(){
-			  $(this).attr('src',$(this).attr('lazy-src'));
-			  $(this).removeAttr('lazy-src');
-			});
+		setTimeout(function(){
+					$("[lazy-src]").each(function(){
+					  $(this).attr('src',$(this).attr('lazy-src'));
+					  $(this).removeAttr('lazy-src');
+					});
+		
+		},100);
         });
 
  $(window).on('load',function() { 
